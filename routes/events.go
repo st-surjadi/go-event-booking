@@ -1,12 +1,10 @@
 package routes
 
 import (
-	"fmt"
 	"net/http"
 	"strconv"
 
 	"example.com/go-event-booking/models"
-	"example.com/go-event-booking/utils"
 	"github.com/gin-gonic/gin"
 )
 
@@ -39,30 +37,15 @@ func getEventById(context *gin.Context) {
 }
 
 func createEvent(context *gin.Context) {
-	token := context.Request.Header.Get("Authorization")
-
-	if token == "" {
-		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not authorized."})
-		return
-	}
-
-	userId, err := utils.VerifyToken(token)
-
-	fmt.Println(userId)
-
-	if err != nil {
-		context.JSON(http.StatusUnauthorized, gin.H{"message": "Not authorized"})
-		return
-	}
-
 	var event models.Event
-	err = context.ShouldBindJSON(&event)
+	err := context.ShouldBindJSON(&event)
 
 	if err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"message": "Parse data is failed!"})
 		return
 	}
 
+	userId := context.GetInt64("userId")
 	event.UserID = userId
 
 	err = event.Save()
