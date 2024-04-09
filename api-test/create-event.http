@@ -1,9 +1,10 @@
-POST http://localhost:8080/events
+POST http://localhost:8080/events 
 content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiZXhwIjoxNzEyNjMzMzE0LCJ1c2VySWQiOjJ9.l29nBb-ifDSoe190yiJHoc3-BZ6RdZF373mHZQwKjnU
 
 {
-  "name": "Another event",
-  "description": "This is a bad event.",
-  "location": "Cirebon",
+  "name": "Better event 2",
+  "description": "This is another good event.",
+  "location": "Jakarta",
   "dateTime": "2025-01-01T15:00:00.000Z"
-}
+} 
