@@ -1,10 +1,10 @@
 POST http://localhost:8080/events 
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGV4YW1wbGUuY29tIiwiZXhwIjoxNzEyNjMzMzE0LCJ1c2VySWQiOjJ9.l29nBb-ifDSoe190yiJHoc3-BZ6RdZF373mHZQwKjnU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQGV4YW1wbGUuY29tIiwiZXhwIjoxNzEyNjQ0MjkxLCJ1c2VySWQiOjN9.YBYaGprwrEAEX3SjXPU287EsjVZ_SjKYoMjJrQ-PRB0
 
 {
-  "name": "Better event 3",
-  "description": "This is another good event.",
+  "name": "The Best Event",
+  "description": "This is the best event.",
   "location": "Jakarta",
   "dateTime": "2025-01-01T15:00:00.000Z"
 } 
