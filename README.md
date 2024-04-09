@@ -13,3 +13,4 @@ This service contains operations for:
 This section should list any major frameworks/libraries used to bootstrap the project.
 * [Gin](https://github.com/gin-gonic/gin)
 * [jwt-go](https://github.com/golang-jwt/jwt)
+* [go-sqlite](https://github.com/glebarez/go-sqlite)
